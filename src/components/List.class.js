@@ -1,18 +1,18 @@
 import React from 'react'
 import ListGroup from 'react-bootstrap/ListGroup'
-import { getNotes } from '../helpers/notes'
+import {getNotes} from '../helpers/notes'
 
 export default class List extends React.Component {
-  state = { selectedNote: undefined }
+  state = {selectedNote: undefined}
 
   // const [selectedNote, setSelectedNote] = useState(undefined)
   onSelectNote = (note) => {
     // setSelectedNote(note)
-    this.setState({ selectedNote: note })
+    this.setState({selectedNote})
   }
 
   render() {
-    const { selectedNote } = this.state // this.state.selectedNote
+    const {selectedNote} = this.state // this.state.selectedNote
     return (
       <ListGroup as="ul">
         {getNotes().map((note, index) => (
